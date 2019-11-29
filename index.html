@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
   <link href="style.css" rel ="stylesheet" type="text/css" media="all">
+  <script src="script.js"></script>
   <title>Akan Name Finder</title>
-  <img src="images/African Proverb.jpg" alt="A quote from an African proverb.">
 </head>
 <body>
+    <!-- <img src="images/African Proverb.jpg" alt="A quote from an African proverb."> -->
   <div class = "Content">
     <div class="Container">
       <div class = "Jumbotron">
@@ -23,21 +24,35 @@
             <p>This app is to help you find your Akan name. Just enter your birthday and gender and we will let 
             you know your Akan name.</p>
       </div>
-        <div class="Forms">
+
+      <form action="" name="form_reg">
+Firstname: <input type="text" name="fname">
+Secondname: <input type="text" name="sname">
+Gender: <select name="gender" id="sex">
+  <option value="Female" id="female">Female</option>
+  <option value="male" id="male">Male</option>
+</select>
+<button onclick="submit()">SUBMIT</button>
+
+      </form>
+
+        <!-- <div class="Forms">
+          <form name="form_reg">
             <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="First name">
+                  <input type="text" class="form-control" name="firstname">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
+                  <input type="text" class="form-control" name="lastname">
                 </div>
               </div>
               Birthday:
               <div class="form-group">
+                
                   <div class="form-row">
                       <div class="col">
-                        <!-- <input type="text" class="form-control" placeholder="First name"> -->
-                      <label for="exampleFormControlSelect1">Choose the day you were born:</label>
+                         <input type="text" class="form-control" placeholder="First name"> -->
+                      <!-- <label for="exampleFormControlSelect1">Choose the day you were born:</label>
                       <select class="form-control" id="exampleFormControlSelect1">
                        <option>1</option>
                       <option>2</option>
@@ -73,7 +88,7 @@
                     </select>
                     </div>
                     <div class="col">
-                      <label for="exampleFormControlSelect1">Choose the day you were born:</label>
+                      <label for="exampleFormControlSelect1">Month of birth:</label>
                         <select class="form-control" id="exampleFormControlSelect1">
                           <option>January</option>
                           <option>February</option>
@@ -82,22 +97,27 @@
                           <option>May</option>
                           <option>June</option>
                           <option>July</option>
-                          <option>Augus</option>
+                          <option>August</option>
                           <option>September</option>
                           <option>October</option>
                           <option>November</option>
                           <option>December</option>
                         </select>
                       </div>
+                      <div class = "col">
+                        <label for="exampleFormControlSelect1">Year of birth:</label>
+
 
                       </div>
-                      
+                      <button onclick="submit()">SUBMIT</button>
                   
                 </div>
 
             </form>
           </div>
-      </div>
+      </div> -->
+
+
     </div>
   </div>
   
