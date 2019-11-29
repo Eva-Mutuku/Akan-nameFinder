@@ -5,16 +5,20 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
 }
 
 /* Styles in body */
+body {
+  background-color: tomato;
+}
 .Content{
   width: 75%;
   height: 90%;
   padding: 5%;
   border: 5px solid gray;
-  margin: 0;
+  margin: 10%;
+  margin-top: 2%;
   display: block;
   background-color: white;
   text-align: center;
