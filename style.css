@@ -1,8 +1,22 @@
- img {
+/* Styles in head */
+img {
   max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+/* Styles in body */
+.Content{
+  width: 75%;
+  height: 90%;
+  padding: 5%;
+  border: 5px solid gray;
+  margin: 0;
+  display: block;
+  background-color: white;
+  text-align: center;
+  
 }
