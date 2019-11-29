@@ -18,12 +18,15 @@
 // }
 
 
-function submit(){
-  // var fname = document.forms["form_reg"]["firstname"].value;
-  // alert(fname);
-  // var sex = document.getElementById("form_reg");
-  // var gender = sex.option[sex.selecedIndex].text;
-  // alert(fname);
-  // alert(gender);
-  alert("Hello")
+function getsubmit(){
+  var fname = document.forms["form_reg"]["firstname"].value;
+  alert(fname);
+  var sex = document.getElementById("form_reg");
+  var gender = sex.option[sex.selectedIndex].text;
+  var DD = document.getElementById("form_reg");
+  var dayOfBirth = DD.option[DD.selectedIndex].value;
+  alert(dayOfBirth);
+  var yearOfBirth = document.forms["form_reg"]["firstname"].value;
+  alert(yearOfBirth);
+  // alert("Hello")
 }
