@@ -1,74 +1,83 @@
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
 function getsubmit(){
   var fname = document.forms["form_reg"]["firstname"].value;
-  alert(fname);
-  var sex = document.getElementById("form_reg");
-  var gender = sex.option[sex.selectedIndex].text;
-  var DD = document.getElementById("form_reg");
-  var dayOfBirth = DD.option[DD.selectedIndex].value;
-  alert(dayOfBirth);
-  var yearOfBirth = document.forms["form_reg"]["firstname"].value;
-  alert(yearOfBirth);
+  // alert(fname);
+  // Older browsers will require a polfyill for RadioNodeList for this to properly function
+  var sex = document.getElementById("Gender"); 
+  // alert(form.elements["Gender"].value);
+  // var gender = sex.option[sex.selectedIndex].text;
+  var DD = document.getElementById("DD");
+  var birthDate = DD.option[DD.selectedIndex].value;
+  // alert(dayOfBirth);
+  var month = document.getElementById("MM");
+  var monthOfBirth = month.option[month.selectedIndex].text;
+  var birthYear = document.forms["form_reg"]["yearOfBirth"].value;
+  alert(birthYear);
   // alert("Hello")
 }
-// Calculating the day one was born
 
-if (DD<=0 || DD>31){
-  alert("Invalid Day!");
-  prompt("Please enter the correct day")
-  }
-  else {
-  var MM = prompt("Enter the month you were born "+1+".January "+2+".February "+3+".March "+4+".April "+5+".May "+6+".June "+7+".July "+8+".August "+9+".September "+10+".October "+11+".November "+12+"December")
-  
-  if (MM<=0 || MM>12){
+// Calculating validity of date and month
+if (birthDate<=0 || birthDate>31){
+  alert("Input not valid");
+}
+if (monthOfBirth<=0 || monthOfBirth>12){
   alert("Invalid month!");
-  prompt("Please enter the correct month.")
-  }
-  else {
-  var dayOfBirth = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
-  }
-  }
-  
+}
+
+//Getting the first and last two digits in the year given
+var CC = birthYear.slice(0,2);
+var YY = birthYear.slice(2,4);
+// Calculating the day one was born
+var dayOfBirth =  parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(monthOfBirth+1)/10)) + birthDate )%7);
+
 // Giving names depending on gender and day of birth
 var akanFemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 var akanMaleNames = ["Kwasi", "Kwacho", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 if (sex==female){
-  if(dayOfBirth==Sunday){
-    alert("Your Akan name is "+akanFemaleNames[0]+". This means that you were born on "+dayOfBirth);
-  } else if(dayOfBirth==Monday){
-    alert("Your Akan name is "+akanFemaleNames[1]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Tuesday){
-    alert("Your Akan name is "+akanFemaleNames[2]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Wednesday){
-    alert("Your Akan name is "+akanFemaleNames[3]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Thursday){
-    alert("Your Akan name is "+akanFemaleNames[4]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Friday){
-    alert("Your Akan name is "+akanFemaleNames[5]+". This means that you were born on "+dayOfBirth);
+  if(dayOfBirth==1){
+    alert("Your Akan name is "+akanFemaleNames[0]+". This means that you were born on Sunday");
+  } else if(dayOfBirth==2){
+    alert("Your Akan name is "+akanFemaleNames[1]+". This means that you were born on Monday");
+  }else if(dayOfBirth==3){
+    alert("Your Akan name is "+akanFemaleNames[2]+". This means that you were born on Tuesday");
+  }else if(dayOfBirth==4){
+    alert("Your Akan name is "+akanFemaleNames[3]+". This means that you were born on Wednesday");
+  }else if(dayOfBirth==5){
+    alert("Your Akan name is "+akanFemaleNames[4]+". This means that you were born on Thursday");
+  }else if(dayOfBirth==6){
+    alert("Your Akan name is "+akanFemaleNames[5]+". This means that you were born on Friday");
   }else{
-    alert("Your Akan name is "+akanFemaleNames[6]+". This means that you were born on "+dayOfBirth);
+    alert("Your Akan name is "+akanFemaleNames[6]+". This means that you were born on Saturday");
   }
 }
 else {
-  if(dayOfBirth==Sunday){
-    alert("Your Akan name is "+akanMaleNames[0]+". This means that you were born on "+dayOfBirth);
-  } else if(dayOfBirth==Monday){
-    alert("Your Akan name is "+akanMaleNames[1]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Tuesday){
-    alert("Your Akan name is "+akanMaleNames[2]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Wednesday){
-    alert("Your Akan name is "+akanMaleNames[3]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Thursday){
-    alert("Your Akan name is "+akanMaleNames[4]+". This means that you were born on "+dayOfBirth);
-  }else if(dayOfBirth==Friday){
-    alert("Your Akan name is "+akanMaleNames[5]+". This means that you were born on "+dayOfBirth);
+  if(dayOfBirth==1){
+    alert("Your Akan name is "+akanMaleNames[0]+". This means that you were born on Sunday");
+  } else if(dayOfBirth==2){
+    alert("Your Akan name is "+akanMaleNames[1]+". This means that you were born on Monday");
+  }else if(dayOfBirth==3){
+    alert("Your Akan name is "+akanMaleNames[2]+". This means that you were born on Tuesday");
+  }else if(dayOfBirth==4){
+    alert("Your Akan name is "+akanMaleNames[3]+". This means that you were born on Wednesday");
+  }else if(dayOfBirth==5){
+    alert("Your Akan name is "+akanMaleNames[4]+". This means that you were born on Thursday");
+  }else if(dayOfBirth==6){
+    alert("Your Akan name is "+akanMaleNames[5]+". This means that you were born on Friday");
   }else{
-    alert("Your Akan name is "+akanMaleNames[6]+". This means that you were born on "+dayOfBirth);
+    alert("Your Akan name is "+akanMaleNames[6]+". This means that you were born on Saturday");
   }
 }
-}
 
-var DD = parseInt(prompt("Enter the day you were born"));
+
+
 
 
 
