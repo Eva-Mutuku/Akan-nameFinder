@@ -25,9 +25,9 @@
             you know your Akan name.</p><br>
       </div>
       <form action="" name="form_reg">
-        Firstname: <input type="text" name="fname">
+        Firstname: <input type="text" name="fname" required>
         Secondname: <input type="text" name="sname">
-        Gender: <form id = "Gender" >
+        Gender: <form id = "Gender"  required>
           <label><input type="radio" name="sex" value="Female" checked>Female</label>
         <label><input type="radio" name="sex" value="Male">Male</label> </form><br>
         <br>
@@ -81,8 +81,9 @@
         <input type="number" name="yearOfBirth">
         <br>
         <button onclick="getsubmit()">SUBMIT</button>
+        <form action = "/cgi-bin/test.cgi" name = "form_reg" onsubmit = "return(validate());">
       </form>
-      <h1>Result:</h1>
+      <h3>Result:</h3>
       <!-- This form attribute is not supported by IE/Edge -->
       <output form="form_reg" name="Result" for="a b"></output>
     </div>

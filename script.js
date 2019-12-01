@@ -1,25 +1,3 @@
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-
-function invalidDateAlert() {
-  if (birthDate<=0 || birthDate>31){
-    alert("Input not valid");
-    return false;
-  }
-}
-
-function invalidMonthAlert() {
-  if (monthOfBirth<=0 || monthOfBirth>12){
-    alert("Invalid month!");
-    return false;
-  }
-}
-
 function getsubmit(){
   var fname = document.forms["form_reg"]["firstname"].value;
   // alert(fname);
@@ -37,9 +15,22 @@ function getsubmit(){
   // alert("Hello")
 }
 
+//Validating functions for invalid dates
+function validateForm() {
+  if (birthDate<=0 || birthDate>31){
+    alert("Input not valid");
+    return false;
+  }
+  if (monthOfBirth<=0 || monthOfBirth>12){
+    alert("Invalid month!");
+    return false;
+  }
+}
+
 //Getting the first and last two digits in the year given
 var CC = birthYear.slice(0,2);
 var YY = birthYear.slice(2,4);
+
 // Calculating the day one was born
 var dayOfBirth = parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(monthOfBirth+1)/10)) + birthDate )%7);
 var birthDay = dayOfBirth.toString();
