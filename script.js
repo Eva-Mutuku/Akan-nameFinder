@@ -6,6 +6,20 @@ function validateForm() {
   }
 }
 
+function invalidDateAlert() {
+  if (birthDate<=0 || birthDate>31){
+    alert("Input not valid");
+    return false;
+  }
+}
+
+function invalidMonthAlert() {
+  if (monthOfBirth<=0 || monthOfBirth>12){
+    alert("Invalid month!");
+    return false;
+  }
+}
+
 function getsubmit(){
   var fname = document.forms["form_reg"]["firstname"].value;
   // alert(fname);
@@ -21,14 +35,6 @@ function getsubmit(){
   var birthYear = document.forms["form_reg"]["yearOfBirth"].value;
   alert(birthYear);
   // alert("Hello")
-}
-
-// Calculating validity of date and month
-if (birthDate<=0 || birthDate>31){
-  alert("Input not valid");
-}
-if (monthOfBirth<=0 || monthOfBirth>12){
-  alert("Invalid month!");
 }
 
 //Getting the first and last two digits in the year given
