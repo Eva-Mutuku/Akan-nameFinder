@@ -3,6 +3,7 @@
 #### By Eva Mutile Mutuku
 ## Description
 The Akan name finder is a webapp that takes in a user's date, month and year of birth. Using this information, it calculate the day when one was born. This day corresponds to an Akan name which is given to the user as output.
+Live site: https://eva-mutuku.github.io/Akan-nameFinder/
 ## Setup/Installation Requirements
 * The app will work in any browser but IE and Edge
 * No need to run a server to use the app
