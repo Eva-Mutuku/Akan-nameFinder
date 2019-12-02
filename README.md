@@ -5,7 +5,7 @@
 The Akan name finder is a webapp that takes in a user's date, month and year of birth. Using this information, it calculate the day when one was born. This day corresponds to an Akan name which is given to the user as output.
 Live link: https://eva-mutuku.github.io/Akan-nameFinder/
 
-# Steps to take
+# Steps to take as user
 * Enter your first and second name on the text boxes provided.
 * Choose your gender.
 * Choose your date and month of birth.
@@ -13,6 +13,15 @@ Live link: https://eva-mutuku.github.io/Akan-nameFinder/
 * Click the submit button.
 * If any of the above is empty, the app will give an alert message telling you to enter valid data.
 * If all data is well input, the app should produce a sentence with your name, akan name and the day you were born.
+
+# Steps used by the app to give result
+* Receive firstname, seconname, gender, date, month and year of birth from user.
+* Upon user clicking the submit button, if any of the above is not available, pop up an alert telling the user to input valid data.
+* If all the above is valid, compute day of birth from information on date, month and year of birth.
+* Map day of birth to correct akan name based on the user's gender.
+* Output user's name, appropriate akan name and meaning as result.
+
+
 
 ## Setup/Installation Requirements
 * The app will work in any browser but IE and Edge
