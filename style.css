@@ -1,14 +1,7 @@
-/* Styles in head */
-img {
-  height: 250px;
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0%;
-  
-}
 
+form {
+  padding-top: 10px;
+}
 /* Styles in body */
 body {
   background-color: tomato;
@@ -16,7 +9,7 @@ body {
 .Content{
   width: 75%;
   height: 90%;
-  padding: 5%;
+  padding:2%;
   border: 5px solid gray;
   margin: 10%;
   margin-top:1%;
