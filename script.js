@@ -40,35 +40,36 @@ function validateForm() {
   // Giving names depending on gender and day of birth
   var akanFemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   var akanMaleNames = ["Kwasi", "Kwacho", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var days= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
   
   if ((dob>=0.0 && dob<1) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[0]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[0]+". This means that you were born on "+days[0];
   } else if((dob>=1.0 && dob<2) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[1]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[1]+". This means that you were born on "+days[1];
   }else if((dob>=2.0 && dob<3) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[2]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[2]+". This means that you were born on "+days[2];
   }else if((dob>=3.0 && dob<4) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[3]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[3]+". This means that you were born on "+days[3];
   }else if((dob>=4.0 && dob<5) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[4]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[4]+". This means that you were born on "+days[4];
   }else if((dob>=5.0 && dob<6) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[5]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[5]+". This means that you were born on "+days[5];
   }else if((dob>=6.0 && dob<7) && (items == 1)){
-    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[6]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[6]+". This means that you were born on "+days[6];
   } else if((dob>=0.0 && dob<1) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[0]+". This means that you were born on Sunday";
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[0]+". This means that you were born on "+days[0];
   } else if((dob>=1.0 && dob<2) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[1]+". This means that you were born on Monday";
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[1]+". This means that you were born on "+days[1];
   }else if((dob>=2.0 && dob<3) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[2]+". This means that you were born on Tuesday";
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[2]+". This means that you were born on "+days[2];
   }else if((dob>=3.0 && dob<4) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[3]+". This means that you were born on Wednesday";  
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[3]+". This means that you were born on "+days[3];  
   }else if((dob>=4.0 && dob<5) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[4]+". This means that you were born on Thursday";  
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[4]+". This means that you were born on "+days[4];  
   }else if((dob>=5.0 && dob<6) && (items == 2)){
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[5]+". This means that you were born on Friday";
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[5]+". This means that you were born on "+days[5];
   }else{
-    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[6]+". This means that you were born on Saturday";
+    document.getElementById("Result").innerHTML="Hi "+fullName+ ". Your Akan name is "+akanMaleNames[6]+". This means that you were born on "+days[6];
   }
 }
   
