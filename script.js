@@ -2,7 +2,7 @@ function getsubmit(){
   var firstName = document.forms["form_reg"]["fname"].value;
   var secondName = document.forms["form_reg"]["sname"].value;
   var fullName = firstName.concat(secondName);
-
+ 
   var sex = document.getElementById("items");
   var items = sex.options[sex.selectedIndex].value;
 
@@ -16,20 +16,20 @@ function getsubmit(){
   DD = parseInt(DD);
 
   //Validating functions for invalid dates
-function validateForm() {
-  if(birthyear=""){
-    alert("Please enter a valid year");
-    return false;
-  }
-  if (DD<=0 || DD>31){
-    alert("Input not valid");
-    return false;
-  }
-  if (month<=0 || month>12){
-    alert("Invalid month!");
-    return false;
-  }
-}
+//function validateForm() {
+//   if(birthyear=""){
+//     alert("Please enter a valid year");
+//     return false;
+//   }
+//   if (DD<=0 || DD>31){
+//     alert("Input not valid");
+//     return false;
+//   }
+//   if (month<=0 || month>12){
+//     alert("Invalid month!");
+//     return false;
+//   }
+// }
 
 
   var a = (CC/4 - 2* CC - 1);
@@ -41,8 +41,10 @@ function validateForm() {
   var akanFemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   var akanMaleNames = ["Kwasi", "Kwacho", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   var days= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-  
-  if ((dob>=0.0 && dob<1) && (items == 1)){
+  if (firstName== "" || secondName=="" ||birthYear=="") {
+    alert("Please enter valid data");
+  }
+  else if ((dob>=0.0 && dob<1) && (items == 1)){
     document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[0]+". This means that you were born on "+days[0];
   } else if((dob>=1.0 && dob<2) && (items == 1)){
     document.getElementById("Result").innerHTML = "Hi "+fullName+ ". Your Akan name is "+akanFemaleNames[1]+". This means that you were born on "+days[1];
